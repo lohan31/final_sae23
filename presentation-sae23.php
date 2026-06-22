@@ -1,6 +1,8 @@
 <?php 
+// Start user session management
 session_start();
-// Inclusion automatique de l'en-tête (qui contient le <head>, le CSS et le menu de navigation)
+
+// Load global navigation layout, metadata configurations, and stylesheet links
 include 'header.php'; 
 ?>
 
@@ -78,7 +80,9 @@ include 'header.php';
     </div>
 </section>
 
-</main> <footer>
+</main> 
+
+<footer>
     <p><strong>SAÉ 23</strong> - Créateurs du projet : Theo Colin, Fuad Zeynalov et Lohan Taho-Taza.</p>
     <p>© 2026 - Département Réseaux & Télécommunications • IUT de Blagnac</p>
 </footer>

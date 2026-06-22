@@ -1,31 +1,32 @@
 <?php
 // login.php
 
-// 1. Démarrage de session sécurisé (évite les conflits si header.php le fait aussi)
+// Start session if not already active
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Si l'utilisateur est déjà connecté, on l'envoie direct sur l'accueil
+// Redirect already logged-in users to home page
 if (isset($_SESSION['user'])) {
     header("Location: index.php");
     exit;
 }
 
+// Enable error reporting for debugging
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+// Include database configuration
 require 'db.php'; 
 
 $error = "";
 
-// ==========================================
-// 2. TRAITEMENT DU FORMULAIRE DE CONNEXION
-// ==========================================
+// Handle authentication request on form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $login = htmlspecialchars($_POST['login']);
     $password = $_POST['password'];
 
-    // Recherche de l'utilisateur (Requête préparée)
+    // Fetch user details using a prepared statement
     $sql = "SELECT * FROM utilisateur WHERE login = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "s", $login);
@@ -33,13 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $result = mysqli_stmt_get_result($stmt);
     $user = mysqli_fetch_assoc($result);
 
-    // Comparaison du mot de passe
+    // Verify user credentials
     if ($user && $password === $user['mot_de_passe']) {
         
+        // Initialize user session variables
         $_SESSION['user'] = $user['login'];
         $_SESSION['role'] = $user['role'];
 
-        // Recherche du bâtiment pour les gestionnaires
+        // Retrieve linked building details for manager accounts
         if ($user['role'] === 'gestionnaire') {
             $sql_bat = "SELECT id_batiment, nom_batiment FROM batiment WHERE login_gestionnaire = ?";
             $stmt_bat = mysqli_prepare($conn, $sql_bat);
@@ -56,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             }
         }
 
-        // Si tout est bon, on redirige !
+        // Redirect to homepage if no configuration errors occurred
         if (empty($error)) {
             header("Location: index.php");
             exit;
@@ -67,9 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     }
 }
 
-// ==========================================
-// 3. AFFICHAGE DE LA PAGE (INCLUSIONS)
-// ==========================================
+// Load page layout header
 include 'header.php'; 
 ?>
 
@@ -85,7 +85,7 @@ include 'header.php';
     <?php endif; ?>
 
     <fieldset>
-        <legend>🔐 Authentification</legend>
+        <legend> Authentification</legend>
         
         <form action="login.php" method="POST" style="margin-bottom: 0;">
             <label for="login">Identifiant :</label>
@@ -102,6 +102,7 @@ include 'header.php';
 </section>
 
 <?php 
+// Load page layout footer if available
 if (file_exists('footer.php')) {
     include 'footer.php'; 
 }

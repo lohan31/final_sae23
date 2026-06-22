@@ -1,0 +1,31 @@
+22 Jun 23:23:14 - [info] 
+
+Bienvenue sur Node-RED
+===================
+
+22 Jun 23:23:14 - [info] Node-RED version: v4.1.11
+22 Jun 23:23:14 - [info] Node.js  version: v20.20.2
+22 Jun 23:23:14 - [info] Linux 6.8.0-124-generic x64 LE
+22 Jun 23:23:14 - [info] Chargement des noeuds de la palette
+22 Jun 23:23:15 - [info] Fichier de paramètres  : /root/.node-red/settings.js
+22 Jun 23:23:15 - [info] Stockage contextuel : 'default' [module=memory]
+22 Jun 23:23:15 - [info] Répertoire utilisateur : /root/.node-red
+22 Jun 23:23:15 - [warn] Projets désactivés : editorTheme.projects.enabled=false
+22 Jun 23:23:15 - [info] Fichier des flux : /root/.node-red/flows.json
+22 Jun 23:23:15 - [info] Le serveur est disponible à l'adresse http://127.0.0.1:1880/
+22 Jun 23:23:15 - [warn] 
+
+--------------------------------------------------------------------------------------------------------
+Votre fichier contenant les identifiants de flux est chiffré à l'aide d'une clé générée par le système.
+
+Si la clé générée par le système est perdue pour une raison quelconque, votre fichier contenant
+les identifiants ne sera pas récupérable, vous devrez le supprimer et ressaisir vos identifiants.
+
+Vous pouvez définir votre propre clé en utilisant l'option 'credentialSecret' dans
+votre fichier de paramètres. Node-RED rechiffrera alors votre fichier contenant les identifiants
+à l'aide de la clé que vous avez choisie la prochaine fois que vous déploierez une modification.
+--------------------------------------------------------------------------------------------------------
+
+22 Jun 23:23:15 - [info] Démarrage des flux
+22 Jun 23:23:15 - [info] Flux démarrés
+22 Jun 23:23:15 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883

@@ -29,3 +29,7 @@ votre fichier de paramètres. Node-RED rechiffrera alors votre fichier contenant
 22 Jun 23:23:15 - [info] Démarrage des flux
 22 Jun 23:23:15 - [info] Flux démarrés
 22 Jun 23:23:15 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:30:05 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:30:20 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:31:11 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:31:26 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883

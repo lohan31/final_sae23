@@ -102,7 +102,7 @@ $batiments = mysqli_query($conn, "SELECT * FROM batiment");
 
 <?= $message ?>
 
-<div class="admin-forms-grid">
+<section class="admin-forms-grid">
     
     <?php if ($role === 'admin'): ?>
     <fieldset>
@@ -138,7 +138,7 @@ $batiments = mysqli_query($conn, "SELECT * FROM batiment");
             <?= $role === 'admin' ? " Vous avez les droits totaux sur l'ensemble des capteurs du campus." : " Vous gérez uniquement les capteurs de votre zone (<b>" . htmlspecialchars($_SESSION['nom_batiment_gere']) . "</b>)." ?>
         </p>
         
-        <div class="admin-forms-grid">
+        <section class="admin-forms-grid">
             <form method="POST">
                 <h3 class="form-heading"> Déployer un capteur</h3>
                 <input type="hidden" name="action" value="add_capteur">
@@ -181,10 +181,10 @@ $batiments = mysqli_query($conn, "SELECT * FROM batiment");
                 <p class="help-text-danger"> Attention : Action irréversible. L'historique des données sera perdu.</p>
                 <button type="submit" class="btn-danger">Supprimer définitivement</button>
             </form>
-        </div>
+        </section>
     </fieldset>
 
-</div>
+</section>
 
 <?php 
 // Load template footer layout

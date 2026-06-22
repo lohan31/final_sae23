@@ -33,3 +33,15 @@ votre fichier de paramètres. Node-RED rechiffrera alors votre fichier contenant
 22 Jun 23:30:20 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
 22 Jun 23:31:11 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
 22 Jun 23:31:26 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:39:22 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:39:37 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:40:27 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:40:42 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:42:33 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:42:48 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:46:46 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:47:01 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:49:51 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:50:07 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:50:57 - [info] [mqtt-broker:broker iut ] Déconnecté du courtier : mqtts://mqtt.iut-blagnac.fr:8883
+22 Jun 23:51:19 - [info] [mqtt-broker:broker iut ] Connecté au courtier : mqtts://mqtt.iut-blagnac.fr:8883

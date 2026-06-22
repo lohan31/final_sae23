@@ -45,30 +45,30 @@ $result = mysqli_query($conn, $sql);
 
 <h2 class="page-title"><?= $titre_page ?></h2>
 
-<div class="grid-capteurs">
+<section class="grid-capteurs">
     <?php // Iterate through each sensor record to display statistical data ?>
     <?php while ($row = mysqli_fetch_assoc($result)): ?>
-        <div class="card-capteur">
+        <article class="card-capteur">
             <h3><?= htmlspecialchars($row['nom_capteur']) ?> <span class="salle-badge"><?= htmlspecialchars($row['nom_salle']) ?></span></h3>
-            <div class="stats">
-                <div class="stat-box">
-                    <span class="stat-val" style="color:#f59e0b;"><?= $row['val_min'] ?? '-' ?></span>
+            <section class="stats">
+                <p class="stat-box">
+                    <data class="stat-val" value="<?= $row['val_min'] ?? '0' ?>" style="color:#f59e0b;"><?= $row['val_min'] ?? '-' ?></data>
                     <span class="stat-label">Min</span>
-                </div>
-                <div class="stat-box actuelle">
-                    <span class="stat-val" style="color:#3b82f6;"><?= $row['val_actuelle'] ?? '-' ?></span>
+                </p>
+                <p class="stat-box actuelle">
+                    <data class="stat-val" value="<?= $row['val_actuelle'] ?? '0' ?>" style="color:#3b82f6;"><?= $row['val_actuelle'] ?? '-' ?></data>
                     <span class="stat-label">Actuel</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-val" style="color:#10b981;"><?= $row['val_max'] ?? '-' ?></span>
+                </p>
+                <p class="stat-box">
+                    <data class="stat-val" value="<?= $row['val_max'] ?? '0' ?>" style="color:#10b981;"><?= $row['val_max'] ?? '-' ?></data>
                     <span class="stat-label">Max</span>
-                </div>
-            </div>
-        </div>
+                </p>
+            </section>
+        </article>
     <?php endwhile; ?>
-</div>
+</section>
 
-<div class="grafana-container">
+<section class="grafana-container">
     <h2> Historique des mesures</h2>
     <?php // Embed external Grafana visualization dashboard ?>
     <iframe 
@@ -76,7 +76,7 @@ $result = mysqli_query($conn, $sql);
         style="width: 100%; height: 600px; border: none; border-radius: 8px; background: #181b1f;" 
         title="Dashboard Grafana">
     </iframe>
-</div>
+</section>
 
 <?php 
 // Load layout footer if file exists
